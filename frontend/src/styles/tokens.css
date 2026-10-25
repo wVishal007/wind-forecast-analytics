@@ -1,0 +1,420 @@
+/* Design Tokens - Professional analytical workspace color system */
+
+:root {
+  /* ===== Primitive Colors ===== */
+  /* Slate scale for UI chrome */
+  --color-slate-50: #f8fafc;
+  --color-slate-100: #f1f5f9;
+  --color-slate-200: #e2e8f0;
+  --color-slate-300: #cbd5e1;
+  --color-slate-400: #94a3b8;
+  --color-slate-500: #64748b;
+  --color-slate-600: #475569;
+  --color-slate-700: #334155;
+  --color-slate-800: #1e293b;
+  --color-slate-900: #0f172a;
+  --color-slate-950: #020617;
+
+  /* Teal accent scale */
+  --color-teal-50: #f0fdfa;
+  --color-teal-100: #ccfbf1;
+  --color-teal-200: #99f6e4;
+  --color-teal-300: #5eead4;
+  --color-teal-400: #2dd4bf;
+  --color-teal-500: #14b8a6;
+  --color-teal-600: #0d9488;
+  --color-teal-700: #0f766e;
+  --color-teal-800: #115e59;
+  --color-teal-900: #134e4a;
+
+  /* Semantic state colors */
+  --color-red-50: #fef2f2;
+  --color-red-100: #fee2e2;
+  --color-red-400: #f87171;
+  --color-red-500: #ef4444;
+  --color-red-600: #dc2626;
+  --color-red-700: #b91c1c;
+
+  --color-green-50: #f0fdf4;
+  --color-green-100: #dcfce7;
+  --color-green-400: #4ade80;
+  --color-green-500: #22c55e;
+  --color-green-600: #16a34a;
+  --color-green-700: #15803d;
+
+  --color-amber-50: #fffbeb;
+  --color-amber-100: #fef3c7;
+  --color-amber-400: #fbbf24;
+  --color-amber-500: #f59e0b;
+  --color-amber-600: #d97706;
+  --color-amber-700: #b45309;
+
+  --color-purple-50: #faf5ff;
+  --color-purple-100: #f3e8ff;
+  --color-purple-400: #c084fc;
+  --color-purple-500: #a855f7;
+  --color-purple-600: #9333ea;
+  --color-purple-700: #7e22ce;
+
+  /* ===== Light Mode Semantic Tokens ===== */
+  --color-bg: var(--color-slate-50);
+  --color-surface: #ffffff;
+  --color-surface-hover: var(--color-slate-100);
+  --color-surface-border: var(--color-slate-200);
+  --color-surface-strong: var(--color-slate-300);
+
+  --color-text: var(--color-slate-900);
+  --color-text-muted: var(--color-slate-500);
+  --color-text-subtle: var(--color-slate-400);
+  --color-text-inverse: #ffffff;
+
+  --color-primary: var(--color-teal-600);
+  --color-primary-hover: var(--color-teal-700);
+  --color-primary-light: var(--color-teal-50);
+  --color-primary-border: var(--color-teal-200);
+
+  --color-actual: var(--color-slate-700);
+  --color-forecast: var(--color-teal-600);
+  --color-forecast-dashed: var(--color-teal-300);
+
+  --color-error-positive: var(--color-red-600);
+  --color-error-negative: var(--color-green-600);
+  --color-error-neutral: var(--color-slate-400);
+
+  --color-p90-band: rgba(217, 119, 6, 0.08);
+  --color-p90-border: var(--color-amber-600);
+
+  --color-gate-closure: var(--color-purple-600);
+  --color-gate-closure-light: var(--color-purple-50);
+
+  --color-grid: var(--color-slate-200);
+  --color-grid-strong: var(--color-slate-300);
+
+  --color-focus: var(--color-teal-600);
+  --color-focus-ring: rgba(13, 148, 136, 0.3);
+
+  --color-success: var(--color-green-600);
+  --color-success-bg: var(--color-green-50);
+  --color-success-border: var(--color-green-200);
+  --color-warning: var(--color-amber-600);
+  --color-warning-bg: var(--color-amber-50);
+  --color-warning-border: var(--color-amber-200);
+  --color-danger: var(--color-red-600);
+  --color-danger-bg: var(--color-red-50);
+  --color-danger-border: var(--color-red-200);
+  --color-info: var(--color-teal-600);
+  --color-info-bg: var(--color-teal-50);
+  --color-info-border: var(--color-teal-200);
+
+  /* Chart-specific */
+  --color-chart-crosshair: rgba(15, 23, 42, 0.15);
+  --color-chart-tooltip-bg: #ffffff;
+  --color-chart-tooltip-border: var(--color-slate-200);
+  --color-chart-missing-marker: var(--color-slate-400);
+  --color-chart-brush-bg: rgba(13, 148, 136, 0.08);
+  --color-chart-brush-border: var(--color-teal-300);
+  --color-chart-brush-handle: var(--color-teal-500);
+  --color-chart-brush-area: rgba(13, 148, 136, 0.12);
+  --color-chart-zoom-reset-bg: var(--color-red-600);
+  --color-chart-zoom-reset-hover: var(--color-red-700);
+
+  /* ===== Spacing Scale ===== */
+  --space-1: 2px;
+  --space-2: 4px;
+  --space-3: 8px;
+  --space-4: 12px;
+  --space-5: 16px;
+  --space-6: 20px;
+  --space-7: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+
+  /* ===== Typography ===== */
+  --font-sans:  Inter, Source Sans 3, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif;
+  --font-mono: JetBrains Mono, Fira Code, ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --text-xs: 0.6875rem;
+  --text-sm: 0.8125rem;
+  --text-base: 0.9375rem;
+  --text-lg: 1.0625rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+
+  --leading-tight: 1.3;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.6;
+
+  /* ===== Border Radius ===== */
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-xl: 10px;
+  --radius-2xl: 12px;
+  --radius-full: 9999px;
+
+  /* ===== Shadows ===== */
+  --shadow-xs: 0 1px 2px rgba(15, 23, 42, 0.03);
+  --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.05), 0 1px 2px rgba(15, 23, 42, 0.03);
+  --shadow-md: 0 4px 8px -2px rgba(15, 23, 42, 0.07), 0 2px 4px -2px rgba(15, 23, 42, 0.04);
+  --shadow-lg: 0 12px 24px -4px rgba(15, 23, 42, 0.08), 0 4px 8px -4px rgba(15, 23, 42, 0.05);
+  --shadow-xl: 0 20px 40px -8px rgba(15, 23, 42, 0.1), 0 8px 16px -8px rgba(15, 23, 42, 0.06);
+
+  /* ===== Transitions ===== */
+  --transition-fast: 80ms ease-out;
+  --transition-normal: 140ms ease-out;
+  --transition-slow: 220ms ease-out;
+
+  /* ===== Z-Index ===== */
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-modal: 300;
+  --z-popover: 400;
+  --z-tooltip: 500;
+
+  /* ===== Layout Dimensions ===== */
+  --header-height: 52px;
+  --sidebar-width: 240px;
+  --sidebar-width-collapsed: 56px;
+  --content-max-width: 1320px;
+  --chart-height: 340px;
+  --chart-height-sm: 280px;
+}
+
+/* ===== Dark Mode Semantic Tokens ===== */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]) {
+    --color-bg: var(--color-slate-950);
+    --color-surface: var(--color-slate-900);
+    --color-surface-hover: var(--color-slate-800);
+    --color-surface-border: var(--color-slate-700);
+    --color-surface-strong: var(--color-slate-600);
+
+    --color-text: var(--color-slate-50);
+    --color-text-muted: var(--color-slate-400);
+    --color-text-subtle: var(--color-slate-500);
+    --color-text-inverse: var(--color-slate-950);
+
+    --color-primary: var(--color-teal-400);
+    --color-primary-hover: var(--color-teal-300);
+    --color-primary-light: rgba(45, 212, 191, 0.1);
+    --color-primary-border: var(--color-teal-700);
+
+    --color-actual: var(--color-slate-200);
+    --color-forecast: var(--color-teal-400);
+    --color-forecast-dashed: var(--color-teal-500);
+
+    --color-error-positive: var(--color-red-400);
+    --color-error-negative: var(--color-green-400);
+    --color-error-neutral: var(--color-slate-500);
+
+    --color-p90-band: rgba(251, 191, 36, 0.1);
+    --color-p90-border: var(--color-amber-400);
+
+    --color-gate-closure: var(--color-purple-400);
+    --color-gate-closure-light: rgba(168, 85, 247, 0.1);
+
+    --color-grid: var(--color-slate-700);
+    --color-grid-strong: var(--color-slate-600);
+
+    --color-focus: var(--color-teal-400);
+    --color-focus-ring: rgba(45, 212, 191, 0.25);
+
+    --color-success: var(--color-green-400);
+    --color-success-bg: rgba(22, 163, 74, 0.1);
+    --color-success-border: var(--color-green-800);
+    --color-warning: var(--color-amber-400);
+    --color-warning-bg: rgba(217, 119, 6, 0.1);
+    --color-warning-border: var(--color-amber-800);
+    --color-danger: var(--color-red-400);
+    --color-danger-bg: rgba(220, 38, 38, 0.1);
+    --color-danger-border: var(--color-red-800);
+    --color-info: var(--color-teal-400);
+    --color-info-bg: rgba(13, 148, 136, 0.1);
+    --color-info-border: var(--color-teal-800);
+
+    --color-chart-crosshair: rgba(248, 250, 252, 0.1);
+    --color-chart-tooltip-bg: var(--color-slate-800);
+    --color-chart-tooltip-border: var(--color-slate-700);
+    --color-chart-missing-marker: var(--color-slate-500);
+    --color-chart-brush-bg: rgba(45, 212, 191, 0.06);
+    --color-chart-brush-border: var(--color-teal-600);
+    --color-chart-brush-handle: var(--color-teal-400);
+    --color-chart-brush-area: rgba(45, 212, 191, 0.1);
+    --color-chart-zoom-reset-bg: var(--color-red-500);
+    --color-chart-zoom-reset-hover: var(--color-red-600);
+
+    --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.2);
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.2);
+    --shadow-md: 0 4px 8px -2px rgba(0, 0, 0, 0.3), 0 2px 4px -2px rgba(0, 0, 0, 0.2);
+    --shadow-lg: 0 12px 24px -4px rgba(0, 0, 0, 0.35), 0 4px 8px -4px rgba(0, 0, 0, 0.25);
+    --shadow-xl: 0 20px 40px -8px rgba(0, 0, 0, 0.4), 0 8px 16px -8px rgba(0, 0, 0, 0.3);
+  }
+}
+
+/* ===== Explicit Theme Classes ===== */
+[data-theme=light] {
+  --color-bg: var(--color-slate-50);
+  --color-surface: #ffffff;
+  --color-surface-hover: var(--color-slate-100);
+  --color-surface-border: var(--color-slate-200);
+  --color-surface-strong: var(--color-slate-300);
+  --color-text: var(--color-slate-900);
+  --color-text-muted: var(--color-slate-500);
+  --color-text-subtle: var(--color-slate-400);
+  --color-text-inverse: #ffffff;
+  --color-primary: var(--color-teal-600);
+  --color-primary-hover: var(--color-teal-700);
+  --color-primary-light: var(--color-teal-50);
+  --color-primary-border: var(--color-teal-200);
+  --color-actual: var(--color-slate-700);
+  --color-forecast: var(--color-teal-600);
+  --color-forecast-dashed: var(--color-teal-300);
+  --color-error-positive: var(--color-red-600);
+  --color-error-negative: var(--color-green-600);
+  --color-error-neutral: var(--color-slate-400);
+  --color-p90-band: rgba(217, 119, 6, 0.08);
+  --color-p90-border: var(--color-amber-600);
+  --color-gate-closure: var(--color-purple-600);
+  --color-gate-closure-light: var(--color-purple-50);
+  --color-grid: var(--color-slate-200);
+  --color-grid-strong: var(--color-slate-300);
+  --color-focus: var(--color-teal-600);
+  --color-focus-ring: rgba(13, 148, 136, 0.3);
+  --color-chart-crosshair: rgba(15, 23, 42, 0.15);
+  --color-chart-tooltip-bg: #ffffff;
+  --color-chart-tooltip-border: var(--color-slate-200);
+  --color-chart-missing-marker: var(--color-slate-400);
+  --color-chart-brush-bg: rgba(13, 148, 136, 0.08);
+  --color-chart-brush-border: var(--color-teal-300);
+  --color-chart-brush-handle: var(--color-teal-500);
+  --color-chart-brush-area: rgba(13, 148, 136, 0.12);
+  --color-chart-zoom-reset-bg: var(--color-red-600);
+  --color-chart-zoom-reset-hover: var(--color-red-700);
+  --shadow-xs: 0 1px 2px rgba(15, 23, 42, 0.03);
+  --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.05), 0 1px 2px rgba(15, 23, 42, 0.03);
+  --shadow-md: 0 4px 8px -2px rgba(15, 23, 42, 0.07), 0 2px 4px -2px rgba(15, 23, 42, 0.04);
+  --shadow-lg: 0 12px 24px -4px rgba(15, 23, 42, 0.08), 0 4px 8px -4px rgba(15, 23, 42, 0.05);
+  --shadow-xl: 0 20px 40px -8px rgba(15, 23, 42, 0.1), 0 8px 16px -8px rgba(15, 23, 42, 0.06);
+}
+
+[data-theme=dark] {
+  --color-bg: var(--color-slate-950);
+  --color-surface: var(--color-slate-900);
+  --color-surface-hover: var(--color-slate-800);
+  --color-surface-border: var(--color-slate-700);
+  --color-surface-strong: var(--color-slate-600);
+  --color-text: var(--color-slate-50);
+  --color-text-muted: var(--color-slate-400);
+  --color-text-subtle: var(--color-slate-500);
+  --color-text-inverse: var(--color-slate-950);
+  --color-primary: var(--color-teal-400);
+  --color-primary-hover: var(--color-teal-300);
+  --color-primary-light: rgba(45, 212, 191, 0.1);
+  --color-primary-border: var(--color-teal-700);
+  --color-actual: var(--color-slate-200);
+  --color-forecast: var(--color-teal-400);
+  --color-forecast-dashed: var(--color-teal-500);
+  --color-error-positive: var(--color-red-400);
+  --color-error-negative: var(--color-green-400);
+  --color-error-neutral: var(--color-slate-500);
+  --color-p90-band: rgba(251, 191, 36, 0.1);
+  --color-p90-border: var(--color-amber-400);
+  --color-gate-closure: var(--color-purple-400);
+  --color-gate-closure-light: rgba(168, 85, 247, 0.1);
+  --color-grid: var(--color-slate-700);
+  --color-grid-strong: var(--color-slate-600);
+  --color-focus: var(--color-teal-400);
+  --color-focus-ring: rgba(45, 212, 191, 0.25);
+  --color-chart-crosshair: rgba(248, 250, 252, 0.1);
+  --color-chart-tooltip-bg: var(--color-slate-800);
+  --color-chart-tooltip-border: var(--color-slate-700);
+  --color-chart-missing-marker: var(--color-slate-500);
+  --color-chart-brush-bg: rgba(45, 212, 191, 0.06);
+  --color-chart-brush-border: var(--color-teal-600);
+  --color-chart-brush-handle: var(--color-teal-400);
+  --color-chart-brush-area: rgba(45, 212, 191, 0.1);
+  --color-chart-zoom-reset-bg: var(--color-red-500);
+  --color-chart-zoom-reset-hover: var(--color-red-600);
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.2);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 4px 8px -2px rgba(0, 0, 0, 0.3), 0 2px 4px -2px rgba(0, 0, 0, 0.2);
+  --shadow-lg: 0 12px 24px -4px rgba(0, 0, 0, 0.35), 0 4px 8px -4px rgba(0, 0, 0, 0.25);
+  --shadow-xl: 0 20px 40px -8px rgba(0, 0, 0, 0.4), 0 8px 16px -8px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== Global Baseline ===== */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+  font-weight: var(--font-normal);
+  min-height: 100vh;
+}
+
+/* Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-surface-border);
+  border-radius: 4px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-grid-strong);
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+/* Selection */
+::selection {
+  background: var(--color-primary-light);
+  color: var(--color-primary);
+}
+
+/* Focus visible polyfill */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
