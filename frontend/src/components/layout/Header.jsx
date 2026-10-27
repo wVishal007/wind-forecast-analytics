@@ -65,7 +65,7 @@ export default function Header() {
     <header className="app-header" role="banner">
       <div className="header-left">
         <h1 className="app-title">GB Wind Forecast Monitor</h1>
-        <span className="app-subtitle">National wind \u00B7 Elexon FUELHH/WINDFOR \u00B7 January 2026</span>
+        <span className="app-subtitle">National wind · Elexon FUELHH/WINDFOR · January 2026</span>
       </div>
       <div className="header-right">
         <div className="theme-selector" role="group" aria-label="Color theme">

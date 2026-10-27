@@ -16,10 +16,12 @@ export default function SeriesChart({ data, xKey, lines, formatX, band }) {
           formatter={(v) => (v == null ? "no data" : Array.isArray(v) ? `${mw(v[0])} to ${mw(v[1])}` : mw(v))}
         />
         <Legend verticalAlign="top" height={32} />
-        {band && <Area dataKey="band" name={band} fill="#0d9488" fillOpacity={0.14} stroke="none" isAnimationActive={false} />}
-        {lines.map(({ key, name, color, dashed }) => (
-          <Line key={key} dataKey={key} name={name} stroke={color} strokeWidth={2} strokeDasharray={dashed ? "6 4" : undefined} dot={false} activeDot={{ r: 4 }} isAnimationActive={false} />
-        ))}
+       {band && <Area dataKey="band" name={band} fill="#0d9488" fillOpacity={0.14} stroke="none" isAnimationActive={false} connectNulls />}
+{lines.map(({ key, name, color, dashed }) => (
+  <Line key={key} dataKey={key} name={name} stroke={color} strokeWidth={2}
+    strokeDasharray={dashed ? "6 4" : undefined} dot={false} activeDot={{ r: 4 }}
+    isAnimationActive={false} connectNulls />
+))}
       </ComposedChart>
     </ResponsiveContainer>
   );
